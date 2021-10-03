@@ -21,7 +21,7 @@ namespace Ejercicio3___Guía4_MM200149
             set { area = value; }
         }
 
-        public virtual void CalcularArea(Label LR)
+        public virtual void CalcularArea()
         {
 
         }
@@ -44,16 +44,33 @@ namespace Ejercicio3___Guía4_MM200149
         }
 
 
-        public override void CalcularArea(Label LR)
+        public override void CalcularArea()
         {
             Area = (Lado * Lado);
-            LR.Text = "Area: " + Area;
-
         }
 
     }
 
+    public class Circulo:Figura
+    {
+        private double radio;
+        public Circulo(double A, double R):base(A)
+        {
+            radio = R;
+        }
 
+        public double Radio
+        {
+            get { return radio; }
+            set { radio = value; }
+        }
+
+        public override void CalcularArea()
+        {
+            Area = (Math.PI * Math.Pow(Radio, 2));
+        }
+
+    }
 
 
 
