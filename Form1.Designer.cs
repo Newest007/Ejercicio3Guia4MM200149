@@ -52,6 +52,10 @@ namespace Ejercicio3___Guía4_MM200149
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btncalrombo = new System.Windows.Forms.Button();
+            this.btncalcirculo = new System.Windows.Forms.Button();
+            this.btncalcuadrado = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -62,7 +66,7 @@ namespace Ejercicio3___Guía4_MM200149
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 28);
+            this.label1.Location = new System.Drawing.Point(201, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(319, 28);
             this.label1.TabIndex = 0;
@@ -82,6 +86,7 @@ namespace Ejercicio3___Guía4_MM200149
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btncalcuadrado);
             this.tabPage1.Controls.Add(this.txtresultado1);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
@@ -99,7 +104,7 @@ namespace Ejercicio3___Guía4_MM200149
             // 
             this.txtresultado1.Enabled = false;
             this.txtresultado1.Location = new System.Drawing.Point(247, 133);
-            this.txtresultado1.MaxLength = 10;
+            this.txtresultado1.MaxLength = 5;
             this.txtresultado1.Name = "txtresultado1";
             this.txtresultado1.ReadOnly = true;
             this.txtresultado1.Size = new System.Drawing.Size(126, 30);
@@ -131,6 +136,7 @@ namespace Ejercicio3___Guía4_MM200149
             this.txtlado.Size = new System.Drawing.Size(126, 30);
             this.txtlado.TabIndex = 1;
             this.txtlado.TextChanged += new System.EventHandler(this.txtlado_TextChanged);
+            this.txtlado.Enter += new System.EventHandler(this.txtlado_Enter);
             // 
             // label2
             // 
@@ -143,6 +149,7 @@ namespace Ejercicio3___Guía4_MM200149
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btncalcirculo);
             this.tabPage2.Controls.Add(this.txtresultado2);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.txtradio);
@@ -160,7 +167,7 @@ namespace Ejercicio3___Guía4_MM200149
             // 
             this.txtresultado2.Enabled = false;
             this.txtresultado2.Location = new System.Drawing.Point(249, 137);
-            this.txtresultado2.MaxLength = 10;
+            this.txtresultado2.MaxLength = 5;
             this.txtresultado2.Name = "txtresultado2";
             this.txtresultado2.ReadOnly = true;
             this.txtresultado2.Size = new System.Drawing.Size(111, 30);
@@ -178,9 +185,11 @@ namespace Ejercicio3___Guía4_MM200149
             // txtradio
             // 
             this.txtradio.Location = new System.Drawing.Point(249, 70);
+            this.txtradio.MaxLength = 5;
             this.txtradio.Name = "txtradio";
             this.txtradio.Size = new System.Drawing.Size(111, 30);
             this.txtradio.TabIndex = 2;
+            this.txtradio.TextChanged += new System.EventHandler(this.txtradio_TextChanged);
             // 
             // label6
             // 
@@ -202,6 +211,7 @@ namespace Ejercicio3___Guía4_MM200149
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btncalrombo);
             this.tabPage3.Controls.Add(this.txtresultado3);
             this.tabPage3.Controls.Add(this.txtdigmenor);
             this.tabPage3.Controls.Add(this.txtdigmayor);
@@ -221,22 +231,26 @@ namespace Ejercicio3___Guía4_MM200149
             // 
             this.txtresultado3.Enabled = false;
             this.txtresultado3.Location = new System.Drawing.Point(263, 167);
-            this.txtresultado3.MaxLength = 10;
+            this.txtresultado3.MaxLength = 5;
             this.txtresultado3.Name = "txtresultado3";
             this.txtresultado3.ReadOnly = true;
             this.txtresultado3.Size = new System.Drawing.Size(111, 30);
             this.txtresultado3.TabIndex = 7;
+            this.txtresultado3.TextChanged += new System.EventHandler(this.txtresultado3_TextChanged);
             // 
             // txtdigmenor
             // 
             this.txtdigmenor.Location = new System.Drawing.Point(263, 117);
+            this.txtdigmenor.MaxLength = 5;
             this.txtdigmenor.Name = "txtdigmenor";
             this.txtdigmenor.Size = new System.Drawing.Size(111, 30);
             this.txtdigmenor.TabIndex = 6;
+            this.txtdigmenor.TextChanged += new System.EventHandler(this.txtdigmenor_TextChanged);
             // 
             // txtdigmayor
             // 
             this.txtdigmayor.Location = new System.Drawing.Point(263, 73);
+            this.txtdigmayor.MaxLength = 5;
             this.txtdigmayor.Name = "txtdigmayor";
             this.txtdigmayor.Size = new System.Drawing.Size(111, 30);
             this.txtdigmayor.TabIndex = 5;
@@ -282,7 +296,7 @@ namespace Ejercicio3___Guía4_MM200149
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(309, 360);
+            this.button1.Location = new System.Drawing.Point(359, 360);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 48);
             this.button1.TabIndex = 2;
@@ -290,19 +304,73 @@ namespace Ejercicio3___Guía4_MM200149
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(206, 360);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(116, 48);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Limpiar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btncalrombo
+            // 
+            this.btncalrombo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btncalrombo.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncalrombo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btncalrombo.Location = new System.Drawing.Point(406, 107);
+            this.btncalrombo.Name = "btncalrombo";
+            this.btncalrombo.Size = new System.Drawing.Size(116, 48);
+            this.btncalrombo.TabIndex = 8;
+            this.btncalrombo.Text = "Calcular";
+            this.btncalrombo.UseVisualStyleBackColor = false;
+            this.btncalrombo.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btncalcirculo
+            // 
+            this.btncalcirculo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btncalcirculo.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncalcirculo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btncalcirculo.Location = new System.Drawing.Point(401, 92);
+            this.btncalcirculo.Name = "btncalcirculo";
+            this.btncalcirculo.Size = new System.Drawing.Size(116, 48);
+            this.btncalcirculo.TabIndex = 9;
+            this.btncalcirculo.Text = "Calcular";
+            this.btncalcirculo.UseVisualStyleBackColor = false;
+            this.btncalcirculo.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btncalcuadrado
+            // 
+            this.btncalcuadrado.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btncalcuadrado.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncalcuadrado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btncalcuadrado.Location = new System.Drawing.Point(407, 94);
+            this.btncalcuadrado.Name = "btncalcuadrado";
+            this.btncalcuadrado.Size = new System.Drawing.Size(116, 48);
+            this.btncalcuadrado.TabIndex = 10;
+            this.btncalcuadrado.Text = "Calcular";
+            this.btncalcuadrado.UseVisualStyleBackColor = false;
+            this.btncalcuadrado.Click += new System.EventHandler(this.btncalcuadrado_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 420);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "v";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -340,6 +408,10 @@ namespace Ejercicio3___Guía4_MM200149
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btncalrombo;
+        private System.Windows.Forms.Button btncalcirculo;
+        private System.Windows.Forms.Button btncalcuadrado;
     }
 }
 

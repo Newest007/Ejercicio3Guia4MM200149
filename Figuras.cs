@@ -21,7 +21,7 @@ namespace Ejercicio3___Guía4_MM200149
             set { area = value; }
         }
 
-        public virtual void CalcularArea()
+        public virtual void CalcularArea(TextBox TB)
         {
 
         }
@@ -44,9 +44,10 @@ namespace Ejercicio3___Guía4_MM200149
         }
 
 
-        public override void CalcularArea()
+        public override void CalcularArea( TextBox TB)
         {
             Area = (Lado * Lado);
+            TB.Text = "" + Area;
         }
 
     }
@@ -65,10 +66,43 @@ namespace Ejercicio3___Guía4_MM200149
             set { radio = value; }
         }
 
-        public override void CalcularArea()
+        public override void CalcularArea(TextBox TB)
         {
             Area = (Math.PI * Math.Pow(Radio, 2));
+            TB.Text = "" + Area;
         }
+
+    }
+
+    public class Rombo : Figura
+    {
+        private double diagonalmayor;
+        private double diagonalmenor;
+        public Rombo(double A, double DMa, double DMe):base(A)
+        {
+            diagonalmayor = DMa;
+            diagonalmenor = DMe;
+        }
+
+        public double DiagonalMayor
+        {
+            get { return diagonalmayor; }
+            set { diagonalmayor = value; }
+        }
+
+        public double DiagonalMenor
+        {
+            get { return diagonalmenor; }
+            set { diagonalmenor = value; }
+        }
+
+
+        public override void CalcularArea(TextBox TB)
+        {
+            Area = (DiagonalMayor * DiagonalMenor) / 2;
+            TB.Text = "" + Area;
+        }
+
 
     }
 
