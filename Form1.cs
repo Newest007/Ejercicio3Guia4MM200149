@@ -16,5 +16,15 @@ namespace Ejercicio3___Guía4_MM200149
         {
             InitializeComponent();
         }
+
+        private void txtlado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
