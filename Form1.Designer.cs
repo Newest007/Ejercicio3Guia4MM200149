@@ -66,7 +66,7 @@ namespace Ejercicio3___Guía4_MM200149
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(201, 28);
+            this.label1.Location = new System.Drawing.Point(206, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(319, 28);
             this.label1.TabIndex = 0;
@@ -296,7 +296,7 @@ namespace Ejercicio3___Guía4_MM200149
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(359, 360);
+            this.button1.Location = new System.Drawing.Point(359, 356);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 48);
             this.button1.TabIndex = 2;
@@ -309,7 +309,7 @@ namespace Ejercicio3___Guía4_MM200149
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(206, 360);
+            this.button2.Location = new System.Drawing.Point(206, 355);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 48);
             this.button2.TabIndex = 3;
